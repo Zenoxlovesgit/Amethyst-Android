@@ -1816,8 +1816,9 @@ public final class Tools {
     }
 
     public static void hasNoOnlineProfileDialog(Activity activity, @Nullable Runnable run, @Nullable String customTitle, @Nullable String customMessage){
-    if (run != null) {
-        run.run();
+        if (run != null) { // Allow execution regardless of online profile status
+            run.run();
+        }
     }
 
     // Some boilerplate to reduce boilerplate elsewhere
